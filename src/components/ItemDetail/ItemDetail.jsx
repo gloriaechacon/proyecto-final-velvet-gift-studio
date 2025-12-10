@@ -5,8 +5,10 @@ export const ItemDetail = ({ detail }) => {
     const { addItem } = useCartContext();
     
     return (
-        <Item {...detail}>
-            <button onClick={() => addItem(detail)}>Add to Cart</button>
-        </Item>
+        <div className="item-detail-container">
+            <Item {...detail} isDetail={true}>
+                <button onClick={() => addItem(detail)}>Add to Cart</button>
+            </Item>
+        </div>
     )
 }

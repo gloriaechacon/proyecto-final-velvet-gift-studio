@@ -15,8 +15,25 @@ export const CartProvider = ({ children }) => {
             return;
         }
 
-        setCart([...cart, item]);
+        setCart([...cart, { ...item, quantity: 1 }]);
          alert(`${item.name} added to cart`);
+    };
+
+    const deleteItem = (id) => {
+        setCart(cart.filter(prod => prod.id !== id));
+    };
+
+    const total = () => {
+        return cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+    };
+
+    const checkout = () => {
+        if (cart.length === 0) {
+            alert("El carrito está vacío");
+            return;
+        }
+        alert("Compra finalizada con éxito");
+        clearCart();
     };
 
     const clearCart = () => {
@@ -31,7 +48,7 @@ export const CartProvider = ({ children }) => {
     }
 
     const values = {
-        cart, addItem, clearCart, getTotalItems
+        cart, addItem, deleteItem, total, checkout, clearCart, getTotalItems
     };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>;

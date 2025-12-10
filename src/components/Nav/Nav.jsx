@@ -11,7 +11,7 @@ const {getTotalItems} = useCartContext();
               <Link to={"/"}>Home</Link>
               </li>
             <li>
-              <Link>About</Link>
+              <Link to="/about">About</Link>
               </li>
             <li>
               <Link to={"/category/flowers"}>Flowers</Link>
@@ -20,11 +20,11 @@ const {getTotalItems} = useCartContext();
               <Link to={"/category/balloons"}>Balloons</Link>
               </li>
             <li>
-              <Link>Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link>Cart</Link>
-              {getTotalItems () > 0 &&(
+              <Link to="/carrito">Cart</Link>
+              {getTotalItems() > 0 &&(
                 <span className="in-cart">{getTotalItems()}</span>
               )}
             </li>
