@@ -1,16 +1,26 @@
-# React + Vite
+# Velvet Gift Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An e-commerce website for flowers and balloons.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Browse Products**: View available flowers and balloons on the home page
+- **Category Filtering**: Filter products by category (Flowers or Balloons)
+- **Product Details**: Click on any product to see more details
+- **Add to Cart**: Add products to your shopping cart from the product detail page
+- **Shopping Cart**: View your cart, see quantities, and remove items
+- **Checkout**: Complete your purchase (currently shows a success message)
+- **Admin Panel**: Add new products through the admin interface (requires login)
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/components/` - React components
+- `src/context/` - Context providers (Cart, Auth)
+- `src/services/` - API services
+- `src/layouts/` - Layout components
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Vite
