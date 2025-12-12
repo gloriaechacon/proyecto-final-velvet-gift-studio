@@ -9,36 +9,36 @@ export const Cart = () => {
 
   return (
     <section className="item-list-container">
-      <h2>Carrito de compras</h2>
+      <h2>Shopping Cart</h2>
 
       {cart.length ? (
         cart.map((prod) => (
           <Item key={prod.id} {...prod}>
-            <span>Cantidad: {prod.quantity}</span>
+            <span>Quantity: {prod.quantity}</span>
             <button className="btn" onClick={() => deleteItem(prod.id)}>
-              Eliminar
+              Remove
             </button>
           </Item>
         ))
       ) : (
-        <p>Tu carrito está vacío</p>
+        <p>Your cart is empty</p>
       )}
 
       {cart.length ? (
         <div className="btn-container">
           <div className="total-pagar">
-            <p>Total a pagar: ${total()}</p>
+            <p>Total to pay: ${total()}</p>
           </div>
           <button className="btn" onClick={checkout}>
-            Finalizar compra
+            Checkout
           </button>
           <button className="btn" onClick={clearCart}>
-            Vaciar carrito
+            Clear Cart
           </button>
         </div>
       ) : (
         <Link className="btn" to="/">
-          Volver al inicio
+          Back to Home
         </Link>
       )}
     </section>

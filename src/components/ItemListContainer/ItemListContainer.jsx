@@ -37,7 +37,7 @@ export const ItemListContainer = ({ titulo }) => {
         if (titulo) return titulo;
         if (category === "flowers") return "Flowers";
         if (category === "balloons") return "Balloons";
-        return "Welcome";
+        return "Velvet Gift Studio";
     };
 
     if (loading) return <div className="item-list-container"><p>Loading...</p></div>;

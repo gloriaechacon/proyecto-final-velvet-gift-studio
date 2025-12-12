@@ -11,18 +11,10 @@ export const Contact = () => {
                     <p style={{ marginBottom: '0.5rem', lineHeight: '1.8', color: '#666' }}>
                         <strong>Email:</strong> info@velvetgiftstudio.com
                     </p>
-                    <p style={{ marginBottom: '0.5rem', lineHeight: '1.8', color: '#666' }}>
-                        <strong>Phone:</strong> +1 (555) 123-4567
-                    </p>
-                    <p style={{ marginBottom: '0.5rem', lineHeight: '1.8', color: '#666' }}>
-                        <strong>Address:</strong> 123 Gift Street, City, State 12345
-                    </p>
-                    <p style={{ marginTop: '2rem', lineHeight: '1.8', color: '#666' }}>
-                        Our customer service team is available Monday through Friday, 9 AM to 6 PM EST.
-                    </p>
                 </div>
             </div>
         </section>
     );
 };
+
 

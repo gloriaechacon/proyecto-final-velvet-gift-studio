@@ -1,19 +1,34 @@
 /* Header Styles */
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  border-radius: 0 0 15px 15px;
 }
 
 header a[href="/"] {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #646cff;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+header a[href="/"]:hover {
+  transform: scale(1.05);
+}
+
+header a[href="/"] img {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transition: transform 0.3s ease;
+}
+
+header a[href="/"]:hover img {
+  transform: scale(1.05);
 }
 
 /* Navigation Styles */
@@ -38,25 +53,43 @@ nav ul li {
 }
 
 nav ul li a {
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background-color 0.25s;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 nav ul li a:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .in-cart {
-  background-color: #646cff;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   color: white;
   border-radius: 50%;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: bold;
   margin-left: 0.5rem;
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
+  box-shadow: 0 2px 8px rgba(245, 87, 108, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 /* Main Container */
@@ -71,6 +104,15 @@ nav ul li a:hover {
   padding: 2rem 0;
 }
 
+.item-list-container h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
 /* Product Grid */
 .item-list {
   display: grid;
@@ -81,16 +123,18 @@ nav ul li a:hover {
 
 .product-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
   overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: all 0.3s ease;
   cursor: pointer;
+  border: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.3);
 }
 
 .product-card img {
@@ -143,34 +187,43 @@ nav ul li a:hover {
 .product-card-detail button {
   display: block;
   margin: 1rem auto;
-  background-color: #646cff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2.5rem;
   font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
 }
 
 .product-card-detail button:hover {
-  background-color: #535bf2;
-  border-color: #535bf2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
 }
 
 .product-card .product-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 1rem 0 0.5rem 0;
-  color: #333;
+  color: #2d3748;
   padding: 0 1rem;
+  font-weight: 600;
 }
 
 .product-card p {
   padding: 0 1rem 1rem 1rem;
-  color: #666;
-  line-height: 1.4;
+  color: #718096;
+  line-height: 1.6;
 }
 
 .product-card p:first-of-type {
   font-weight: bold;
-  color: #646cff;
-  font-size: 1.1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.2rem;
 }
 
 /* Responsive Design */
@@ -231,12 +284,13 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-  background-color: #fff;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 -4px 15px rgba(102, 126, 234, 0.3);
+  padding: 2.5rem;
   margin-top: 4rem;
   text-align: center;
-  color: #666;
+  color: #fff;
+  border-radius: 15px 15px 0 0;
 }
 
 /* Loading State */

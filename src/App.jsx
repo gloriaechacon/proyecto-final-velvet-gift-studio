@@ -25,11 +25,11 @@ return (
             <Route element={<MainLayout />}>
               <Route
                 path="/"
-                element={<ItemListContainer titulo={"Bienvenidos"} />}
+                element={<ItemListContainer titulo={"Velvet Gift Studio"} />}
               />
               <Route
                 path="/category/:category"
-                element={<ItemListContainer titulo={"Bienvenidos"} />}
+                element={<ItemListContainer />}
               />
               <Route path="/detail/:id" element={<ItemDetailContainer />} />
               <Route path="/carrito" element={<Cart />} />

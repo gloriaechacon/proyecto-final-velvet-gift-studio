@@ -29,10 +29,10 @@ export const CartProvider = ({ children }) => {
 
     const checkout = () => {
         if (cart.length === 0) {
-            alert("El carrito está vacío");
+            alert("The cart is empty");
             return;
         }
-        alert("Compra finalizada con éxito");
+        alert("Purchase completed successfully");
         clearCart();
     };
 

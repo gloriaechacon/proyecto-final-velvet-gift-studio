@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer>
-      <p>Pagina creada por Gloria</p>
+      <p>Page created by Gloria</p>
     </footer>
   );
 };
